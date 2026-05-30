@@ -3,8 +3,8 @@ import Foundation
 // MARK: - Tavily Search Request
 
 public struct TavilySearchRequest: Codable {
-    public init(apiKey: String, query: String, searchDepth: String = "basic", includeImages: Bool = false, includeAnswer: Bool = false, includeRawContent: Bool = false, maxResults: Int = 5, includeDomains: [String]? = nil, excludeDomains: [String]? = nil) {
-        self.apiKey = apiKey; self.query = query; self.searchDepth = searchDepth; self.includeImages = includeImages; self.includeAnswer = includeAnswer; self.includeRawContent = includeRawContent; self.maxResults = maxResults; self.includeDomains = includeDomains; self.excludeDomains = excludeDomains
+    public init(apiKey: String, query: String, searchDepth: String = "basic", includeImages: Bool = false, includeAnswer: Bool = false, includeRawContent: Bool = false, maxResults: Int = 5) {
+        self.apiKey = apiKey; self.query = query; self.searchDepth = searchDepth; self.includeImages = includeImages; self.includeAnswer = includeAnswer; self.includeRawContent = includeRawContent; self.maxResults = maxResults
     }
 
     public let apiKey: String
