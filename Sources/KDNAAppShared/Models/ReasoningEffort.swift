@@ -86,6 +86,9 @@ public enum ReasoningEffort: String, Codable, CaseIterable, Sendable {
 }
 
 public struct GenerationSettings: Codable, Sendable, Equatable {
+    public init(temperature: Double = 0.7, reasoningEffort: ReasoningEffort = .medium) {
+        self.temperature = temperature; self.reasoningEffort = reasoningEffort
+    }
     public var temperature: Float
     public var reasoningEffort: ReasoningEffort
 
