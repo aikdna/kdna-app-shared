@@ -7,7 +7,7 @@ public enum WebSearchProvider: String, CaseIterable, Identifiable, Codable {
     case tavily
     case exa
 
-    var id: String { rawValue }
+    public var id: String { rawValue }
 
     var displayName: String {
         switch self {
@@ -144,7 +144,7 @@ public enum SearchStatus: Equatable {
     case completed(sources: [SearchSource])
     case failed(Error)
     
-    static func == (lhs: SearchStatus, rhs: SearchStatus) -> Bool {
+    public static func == (lhs: SearchStatus, rhs: SearchStatus) -> Bool {
         switch (lhs, rhs) {
         case (.searching(let q1), .searching(let q2)):
             return q1 == q2
