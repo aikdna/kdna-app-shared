@@ -25,7 +25,7 @@ open class BaseAPIHandler: APIService, @unchecked Sendable {
 
     // MARK: - APIService Protocol Implementation
 
-    public func sendMessage(
+    open func sendMessage(
         _ requestMessages: [[String: String]],
         tools: [[String: Any]]? = nil,
         settings: GenerationSettings,
@@ -45,7 +45,7 @@ open class BaseAPIHandler: APIService, @unchecked Sendable {
         }
     }
 
-    public func sendMessageStream(
+    open func sendMessageStream(
         _ requestMessages: [[String: String]],
         tools: [[String: Any]]? = nil,
         settings: GenerationSettings
