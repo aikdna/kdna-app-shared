@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Exa Search Request
 
-public public struct ExaSearchRequest: Encodable {
+public struct ExaSearchRequest: Encodable {
     public let query: String
     public let type: String
     public let numResults: Int
