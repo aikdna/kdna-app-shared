@@ -24,11 +24,27 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ExaModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift"
         },
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ReasoningEffort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/TavilyModels.swift"
         },
         {
           "kind" : "file",
@@ -51,8 +67,12 @@
       "moduleName" : "KDNAAppShared",
       "moduleOutputPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNAAppShared.swiftmodule",
       "objects" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/ExaModels.swift.o",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/ReasoningEffort.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/RequestMessagesTransformer.swift.o",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/TavilyModels.swift.o",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.swift.o"
       ],
       "otherArguments" : [
@@ -108,11 +128,27 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/ExaModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swift.o"
         },
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/ReasoningEffort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/RequestMessagesTransformer.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/TavilyModels.swift.o"
         },
         {
           "kind" : "file",
@@ -125,8 +161,12 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ExaModels.swift",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ReasoningEffort.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/TavilyModels.swift",
         "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift"
       ],
       "tempsPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build",
@@ -326,8 +366,12 @@
       "-package-name",
       "kdna_app_shared",
       "-c",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ExaModels.swift",
       "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ReasoningEffort.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift",
       "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/TavilyModels.swift",
       "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift",
       "-I",
       "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules",
@@ -481,11 +525,27 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ExaModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift"
         },
         {
           "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/ReasoningEffort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/TavilyModels.swift"
         },
         {
           "kind" : "file",

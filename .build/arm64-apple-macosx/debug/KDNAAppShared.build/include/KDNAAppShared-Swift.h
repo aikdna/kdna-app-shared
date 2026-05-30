@@ -344,6 +344,7 @@ extern "C" {
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 #endif
 
 #endif // defined(__OBJC__)
@@ -365,6 +366,15 @@ extern "C" {
 #endif
 
 #if defined(__OBJC__)
+
+SWIFT_CLASS_NAMED("RequestMessagesTransformer")
+@interface RequestMessagesTransformer : NSSecureUnarchiveFromDataTransformer
++ (Class _Nonnull)transformedValueClass SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)allowsReverseTransformation SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)transformedValue:(id _Nullable)value SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)reverseTransformedValue:(id _Nullable)value SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif // defined(__OBJC__)
 #if __has_attribute(external_source_symbol)
