@@ -67,7 +67,7 @@ public enum ReasoningEffort: String, Codable, CaseIterable, Sendable {
         }
     }
 
-    static func fromProviderValue(_ value: String) -> ReasoningEffort? {
+    public static func fromProviderValue(_ value: String) -> ReasoningEffort? {
         switch value.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() {
         case "none", "off":
             return .off
