@@ -2,11 +2,14 @@ import Foundation
 
 // MARK: - Exa Search Request
 
-public struct ExaSearchRequest: Encodable {
+public public struct ExaSearchRequest: Encodable {
     public let query: String
     public let type: String
     public let numResults: Int
     public let contents: ExaSearchContents
+    public init(query: String, type: String, numResults: Int, contents: ExaSearchContents) {
+        self.query = query; self.type = type; self.numResults = numResults; self.contents = contents
+    }
 }
 
 public struct ExaSearchContents: Encodable {
