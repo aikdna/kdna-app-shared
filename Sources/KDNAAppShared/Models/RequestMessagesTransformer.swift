@@ -4,7 +4,7 @@ import Foundation
 @objc(RequestMessagesTransformer)
 public class RequestMessagesTransformer: NSSecureUnarchiveFromDataTransformer {
 
-    static let name = NSValueTransformerName(rawValue: "RequestMessagesTransformer")
+    public static let name = NSValueTransformerName(rawValue: "RequestMessagesTransformer")
 
     public override class func transformedValueClass() -> AnyClass {
         return NSData.self
