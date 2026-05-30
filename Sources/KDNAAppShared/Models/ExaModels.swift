@@ -15,6 +15,10 @@ public struct ExaSearchRequest: Encodable {
 public struct ExaSearchContents: Encodable {
     public let highlights: Bool
     public let text: Bool
+
+    public init(highlights: Bool, text: Bool) {
+        self.highlights = highlights; self.text = text
+    }
 }
 
 // MARK: - Exa Search Response
