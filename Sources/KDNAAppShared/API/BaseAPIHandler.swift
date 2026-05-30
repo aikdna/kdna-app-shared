@@ -8,21 +8,19 @@ open class BaseAPIHandler: APIService, @unchecked Sendable {
     public let model: String
     public let session: URLSession
     internal let streamingSession: URLSession
-    open var logger: KDNALogger { _logger }
-    private let _logger: KDNALogger
+    open var logger: KDNALogger { NoOpLogger() }
 
-    public init(config: APIServiceConfiguration, session: URLSession, streamingSession: URLSession, logger: KDNALogger = NoOpLogger()) {
+    public init(config: APIServiceConfiguration, session: URLSession, streamingSession: URLSession) {
         self.name = config.name
         self.baseURL = config.apiUrl
         self.apiKey = config.apiKey
         self.model = config.model
         self.session = session
         self.streamingSession = streamingSession
-        self._logger = logger
     }
 
-    public convenience init(config: APIServiceConfiguration, session: URLSession, logger: KDNALogger = NoOpLogger()) {
-        self.init(config: config, session: session, streamingSession: session, logger: logger)
+    public convenience init(config: APIServiceConfiguration, session: URLSession) {
+        self.init(config: config, session: session, streamingSession: session)
     }
 
     // MARK: - APIService Protocol Implementation
