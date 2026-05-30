@@ -9,7 +9,7 @@ public enum WebSearchProvider: String, CaseIterable, Identifiable, Codable {
 
     public var id: String { rawValue }
 
-    var displayName: String {
+    public var displayName: String {
         switch self {
         case .tavily:
             return "Tavily"
@@ -18,7 +18,7 @@ public enum WebSearchProvider: String, CaseIterable, Identifiable, Codable {
         }
     }
 
-    var apiKeyURL: URL {
+    public var apiKeyURL: URL {
         switch self {
         case .tavily:
             return URL(string: "https://app.tavily.com")!
