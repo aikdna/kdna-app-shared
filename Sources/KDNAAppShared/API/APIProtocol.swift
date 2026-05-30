@@ -20,6 +20,10 @@ public struct ToolCall: Codable {
     public struct FunctionCall: Codable {
         public let name: String
         public let arguments: String
+        public init(name: String, arguments: String) {
+            self.name = name
+            self.arguments = arguments
+        }
     }
 
     public init(id: String, type: String, function: FunctionCall) {
