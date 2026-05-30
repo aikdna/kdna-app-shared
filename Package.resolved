@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "kdna-core-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aikdna/kdna-core-swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e21d64ef8582125c11f0956d08325b7f9b9dff19"
+      }
+    }
+  ],
+  "version" : 2
+}
