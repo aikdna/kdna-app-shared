@@ -4,7 +4,7 @@ import KDNACore
 open class BaseAPIHandler: APIService, @unchecked Sendable {
     public let name: String
     public let baseURL: URL
-    internal let apiKey: String
+    public let apiKey: String
     public let model: String
     public let session: URLSession
     internal let streamingSession: URLSession
