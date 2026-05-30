@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/primary.swiftdeps"
+  },
+  "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift": {
+    "dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.d",
+    "object": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swift.o",
+    "swiftmodule": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swiftdeps",
+    "diagnostics": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.dia"
+  },
+  "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift": {
+    "dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.d",
+    "object": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swift.o",
+    "swiftmodule": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swiftdeps",
+    "diagnostics": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.dia"
+  },
+  "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift": {
+    "dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.d",
+    "object": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.swift.o",
+    "swiftmodule": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.swiftdeps",
+    "diagnostics": "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.dia"
+  }
+}

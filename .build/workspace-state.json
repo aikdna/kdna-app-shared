@@ -1,0 +1,30 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "kdna-core-swift",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/aikdna/kdna-core-swift.git",
+          "name" : "kdna-core-swift"
+        },
+        "state" : {
+          "checkoutState" : {
+            "branch" : "main",
+            "revision" : "e21d64ef8582125c11f0956d08325b7f9b9dff19"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "kdna-core-swift"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

@@ -1,0 +1,562 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.KDNAAppShared-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/sources",
+      "importPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNACore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "KDNAAppShared",
+      "moduleOutputPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNAAppShared.swiftmodule",
+      "objects" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/include/KDNAAppShared-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "kdna_app_shared"
+      ],
+      "outputFileMapPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SearchModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/SharedTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNAAppShared.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift"
+      ],
+      "tempsPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.KDNACore-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/sources",
+      "importPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAAssetReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAComposer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAContentDigest.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNACrypto.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainLoader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNARouter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNATrust.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNCoreTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNJudgmentPipeline.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "KDNACore",
+      "moduleOutputPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNACore.swiftmodule",
+      "objects" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAAssetReader.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAComposer.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAContentDigest.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNACrypto.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNADomainLoader.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNADomainValidator.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNARouter.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNATrust.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNCoreTypes.swift.o",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNJudgmentPipeline.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/include/KDNACore-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings",
+        "-package-name",
+        "kdna_core_swift"
+      ],
+      "outputFileMapPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAAssetReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAComposer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNAContentDigest.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNACrypto.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNADomainLoader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNADomainValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNARouter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNATrust.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNCoreTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/KDNJudgmentPipeline.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules/KDNACore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAAssetReader.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAComposer.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAContentDigest.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNACrypto.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainLoader.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainValidator.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNARouter.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNATrust.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNCoreTypes.swift",
+        "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNJudgmentPipeline.swift"
+      ],
+      "tempsPath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "KDNAAppShared" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "KDNAAppShared",
+      "-package-name",
+      "kdna_app_shared",
+      "-c",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift",
+      "-I",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/include/KDNAAppShared-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "kdna_app_shared",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "KDNACore" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "KDNACore",
+      "-package-name",
+      "kdna_core_swift",
+      "-c",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAAssetReader.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAComposer.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAContentDigest.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNACrypto.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainLoader.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainValidator.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNARouter.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNATrust.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNCoreTypes.swift",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNJudgmentPipeline.swift",
+      "-I",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/include/KDNACore-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-package-name",
+      "kdna_core_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "KDNAAppShared" : [
+      "KDNACore"
+    ],
+    "KDNACore" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/Models/SearchModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/Sources/KDNAAppShared/SharedTypes.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNAAppShared.build/sources"
+    },
+    "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAAssetReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAComposer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNAContentDigest.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNACrypto.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainLoader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNADomainValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNARouter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNATrust.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNCoreTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/checkouts/kdna-core-swift/Sources/KDNACore/KDNJudgmentPipeline.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/KDNACore.build/sources"
+    },
+    "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/AI/K/OPEN_SOURCE/kdna-app-shared/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
