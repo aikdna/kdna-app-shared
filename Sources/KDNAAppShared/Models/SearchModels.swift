@@ -28,7 +28,7 @@ public enum WebSearchProvider: String, CaseIterable, Identifiable, Codable {
     }
 
     public static var selected: WebSearchProvider {
-        let rawValue = UserDefaults.standard.string(forKey: "WebSearchProvider")
+        let rawValue = UserDefaults.standard.string(forKey: "webSearchProvider")
         return rawValue.flatMap(WebSearchProvider.init(rawValue:)) ?? .tavily
     }
 }
