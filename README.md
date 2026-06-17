@@ -20,7 +20,7 @@ This package provides:
 
 ## Dependencies
 
-- [kdna-core-swift](https://github.com/aikdna/kdna-core-swift) — KDNA Protocol core library
+- [kdna-core-swift](https://github.com/aikdna/kdna-core-swift) — KDNA Core
 
 ## Platforms
 
