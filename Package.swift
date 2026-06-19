@@ -16,5 +16,9 @@ let package = Package(
             dependencies: [.product(name: "KDNACore", package: "kdna-core-swift")],
             path: "Sources/KDNAAppShared"
         ),
+        .testTarget(
+            name: "KDNAAppSharedTests",
+            dependencies: ["KDNAAppShared"]
+        ),
     ]
 )
