@@ -21,9 +21,9 @@ For KDNA authorization UI, this package may contain presentation helpers such as
 - license status view models
 - shared import/install error presentation
 
-The current public `kdna-core-swift` package dependency is `0.2.0`. Until a
-released Core version exposes `KDNALoadPlan` and `KDNAJudgmentProjection` as
-public package APIs, apps should map Core output into
+The current `kdna-core-swift` package dependency is pinned to revision
+`0c94032bea8677167e7d57e8d914d9e29bef9edf` until the next stable Core tag
+publishes the current LoadPlan/runtime APIs. Apps should map Core output into
 `KDNALoadPlanPresentationInput` and render it through
 `KDNAAuthorizationPresentation`.
 

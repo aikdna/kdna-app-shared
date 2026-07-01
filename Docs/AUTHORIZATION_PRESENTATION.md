@@ -19,10 +19,11 @@ crypto profiles, or runtime projection policy.
 
 ## Current Adapter
 
-The current public dependency on `kdna-core-swift` is `0.2.0`, which does not
-yet publish `KDNALoadPlan` as a package API. Until the next Core release,
-apps should create `KDNALoadPlanPresentationInput` from the Core LoadPlan fields
-they receive and pass it to:
+The current dependency on `kdna-core-swift` is pinned to revision
+`0c94032bea8677167e7d57e8d914d9e29bef9edf` until the next stable Core tag
+publishes the current LoadPlan/runtime APIs. Apps should create
+`KDNALoadPlanPresentationInput` from the Core LoadPlan fields they receive and
+pass it to:
 
 ```swift
 let presentation = KDNAAuthorizationPresentation.from(loadPlan: input)
