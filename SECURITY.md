@@ -2,11 +2,30 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in KDNA, please **do not** open a public issue.
+Please **do not** report security vulnerabilities through public GitHub issues.
 
-Email: **security@aikdna.com**
+Instead, use one of these private channels:
 
-We will respond within 48 hours and work with you on a coordinated disclosure timeline.
+- **GitHub Private Vulnerability Reporting**: Go to the [Security Advisories](https://github.com/aikdna/kdna-app-shared/security/advisories/new) page
+- **Email**: security@aikdna.com
+
+We aim to respond within 72 hours and provide a timeline for resolution within
+1 week. Please do not disclose the vulnerability publicly until we have had a
+chance to address it.
+
+## Supported Versions
+
+`kdna-app-shared` is a public beta support surface for shared KDNA Apple app
+infrastructure.
+
+| Component | Supported Versions |
+|-----------|-------------------|
+| KDNA Protocol | Latest tagged release in `aikdna/kdna` |
+| kdna-core-swift | Latest mainline beta release |
+| kdna-app-shared | Latest mainline beta release |
+
+Older Swift beta versions may receive critical security patches on a
+case-by-case basis.
 
 ## About This Package
 
@@ -16,6 +35,10 @@ The security model for KDNA assets is defined and implemented in:
 
 - **`aikdna/kdna`** — Core protocol, crypto profiles, LoadPlan authorization, container validation
 - **`aikdna/kdna-core-swift`** — Swift runtime with crypto parity
+
+For the KDNA Protocol security architecture, see
+[GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/docs/GOVERNANCE.md)
+in the main protocol repository.
 
 ## Best Practices
 
