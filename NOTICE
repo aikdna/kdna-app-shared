@@ -1,0 +1,12 @@
+kdna-app-shared
+Copyright 2026 KDNA Authors
+
+This product includes software developed at
+https://github.com/aikdna/kdna-app-shared
+
+kdna-app-shared provides shared Swift app infrastructure for KDNA Apple
+applications, including reusable presentation, authorization, settings,
+and API support primitives.
+
+See LICENSE for the full Apache 2.0 license text. See README.md for the
+shared app infrastructure guide and package boundary.
