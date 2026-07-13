@@ -1,7 +1,7 @@
 import Foundation
 import KDNACore
 
-// MARK: - Shared types between KDNaStudio and KDNAChat
+// MARK: - Shared types for native KDNA applications
 
 public struct KDNAAppConfig {
     public static let kdnaHome = FileManager.default.homeDirectoryForCurrentUser
