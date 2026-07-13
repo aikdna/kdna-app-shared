@@ -1,11 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "argon2swift",
+      "identity" : "argon2kit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tmthecoder/Argon2Swift.git",
+      "location" : "https://github.com/rkreutz/Argon2Kit.git",
       "state" : {
-        "revision" : "53543623fefe68461b7eeea03d7f96677c2fd76d"
+        "revision" : "87b9ca9c42304b8c6a5c14d7f6d6a0342917e71c",
+        "version" : "0.1.1"
       }
     },
     {
@@ -13,16 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aikdna/kdna-core-swift.git",
       "state" : {
-        "revision" : "0c94032bea8677167e7d57e8d914d9e29bef9edf"
-      }
-    },
-    {
-      "identity" : "phc-winner-argon2",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/P-H-C/phc-winner-argon2.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "f57e61e19229e23c4445b85494dbf7c07de721cb"
+        "revision" : "fbb6e45cb9f6e619b54605c48ebe9d895a9535c2",
+        "version" : "0.3.1"
       }
     }
   ],
