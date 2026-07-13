@@ -21,7 +21,7 @@ For KDNA authorization UI, this package may contain presentation helpers such as
 - license status view models
 - shared import/install error presentation
 
-The package consumes `kdna-core-swift` from its stable `0.3.1` release line.
+The package consumes `kdna-core-swift` from its stable `0.4.0` release line.
 Apps should map Core output into
 `KDNALoadPlanPresentationInput` and render it through
 `KDNAAuthorizationPresentation`.

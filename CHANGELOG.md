@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 — 2026-07-13
+
+- Move the minimum Swift Core dependency to 0.4.0 so application presentation
+  code consumes the current account/device entitlement LoadPlan contract.
+- Keep all authorization decisions in Core; this package only maps verified
+  Core state into UI-facing presentation models.
+
 ## 0.4.1 — 2026-07-13
 
 - Replace the temporary Core revision pin with the stable
