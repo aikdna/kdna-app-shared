@@ -4,6 +4,13 @@
 
 Shared Swift package for platform-neutral app infrastructure used by KDNA Chat, KDNA Studio, and KDNA iOS apps.
 
+> **Status: recertification pending.** The package manifest declares
+> `kdna-core-swift` with a `0.4.0` lower bound and `Package.resolved` still
+> resolves `0.4.0`, while the current published Swift Core line is `0.20.x`.
+> This package predates the current Swift Core contract and must not be
+> treated as compatible with it until exact-coordinate recertification lands.
+> See the dependency note under Scope below.
+
 ## Scope
 
 This package provides:
@@ -19,10 +26,12 @@ For KDNA authorization UI, this package may contain presentation helpers such as
 - LoadPlan-to-UI presentation state
 - Keychain-backed SecretStore adapters
 - license status view models
-- shared import/install error presentation
+- shared open/attachment error presentation
 
-The package consumes `kdna-core-swift` from its stable `0.4.0` release line.
-Apps should map Core output into
+The published package manifest declares `kdna-core-swift` with a `0.4.0` lower
+bound rather than an exact pin. This repository predates the current Swift Core
+contract and requires exact-coordinate recertification before it can claim
+current compatibility. Apps should map verified Core output into
 `KDNALoadPlanPresentationInput` and render it through
 `KDNAAuthorizationPresentation`.
 
@@ -46,6 +55,10 @@ manifest fields in this package.
 
 This package may translate Core states into labels, severity, symbols, and
 actions. It must not decide whether a KDNA can load.
+
+Saving or opening a file is not authorization. Presentation code must keep the
+active asset identity, exact version or digest, attachment scope, reason, and
+disable/switch/rollback actions visible.
 
 ## Platforms
 

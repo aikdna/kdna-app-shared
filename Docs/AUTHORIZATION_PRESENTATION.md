@@ -19,9 +19,10 @@ crypto profiles, or runtime projection policy.
 
 ## Current Adapter
 
-The current dependency on `kdna-core-swift` is pinned to revision
-`0c94032bea8677167e7d57e8d914d9e29bef9edf` until the next stable Core tag
-publishes the current LoadPlan/runtime APIs. Apps should create
+The package manifest declares a `0.4.0` lower bound and does not pin an exact
+Swift Core revision. This published package predates the current Core contract,
+so compatibility must be established at an exact resolved coordinate before a
+release claim. Apps should create
 `KDNALoadPlanPresentationInput` from the Core LoadPlan fields they receive and
 pass it to:
 
@@ -43,3 +44,8 @@ pass only that projection to ordinary model context.
 KDNA Studio may use the same helper to show whether an exported asset validates
 for runtime loading, but Studio export correctness must be validated by Swift
 Core and the CLI.
+
+Apps must distinguish file storage, attachment, authorization, applicability,
+and load. They must expose active identity, exact version or digest, scope,
+reason, and disable/switch/rollback controls; presentation helpers do not create
+those permissions.
