@@ -19,10 +19,12 @@ For KDNA authorization UI, this package may contain presentation helpers such as
 - LoadPlan-to-UI presentation state
 - Keychain-backed SecretStore adapters
 - license status view models
-- shared import/install error presentation
+- shared open/attachment error presentation
 
-The package consumes `kdna-core-swift` from its stable `0.4.0` release line.
-Apps should map Core output into
+The published package manifest declares `kdna-core-swift` with a `0.4.0` lower
+bound rather than an exact pin. This repository predates the current Swift Core
+contract and requires exact-coordinate recertification before it can claim
+current compatibility. Apps should map verified Core output into
 `KDNALoadPlanPresentationInput` and render it through
 `KDNAAuthorizationPresentation`.
 
@@ -46,6 +48,10 @@ manifest fields in this package.
 
 This package may translate Core states into labels, severity, symbols, and
 actions. It must not decide whether a KDNA can load.
+
+Saving or opening a file is not authorization. Presentation code must keep the
+active asset identity, exact version or digest, attachment scope, reason, and
+disable/switch/rollback actions visible.
 
 ## Platforms
 
