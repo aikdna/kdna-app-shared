@@ -4,6 +4,13 @@
 
 Shared Swift package for platform-neutral app infrastructure used by KDNA Chat, KDNA Studio, and KDNA iOS apps.
 
+> **Status: recertification pending.** The package manifest declares
+> `kdna-core-swift` with a `0.4.0` lower bound and `Package.resolved` still
+> resolves `0.4.0`, while the current published Swift Core line is `0.20.x`.
+> This package predates the current Swift Core contract and must not be
+> treated as compatible with it until exact-coordinate recertification lands.
+> See the dependency note under Scope below.
+
 ## Scope
 
 This package provides:
