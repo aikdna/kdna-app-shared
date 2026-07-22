@@ -8,6 +8,12 @@
 - Restore the declared generic iOS build by using Application Support instead
   of the macOS-only home-directory API and compiling the `NSEvent` swipe helper
   only on macOS; CI now proves both macOS tests and a generic iOS target.
+- Add a fail-closed DTO and presentation model for exact runtime CLI workspace
+  attachment status. It keeps identity, digest, scope, reason, state, and
+  enable/disable/switch/rollback/remove controls visible without owning or
+  mutating `.kdna/attachments.json`.
+- Correct the implementation-contract document to reflect the already pinned
+  exact Swift Core candidate instead of the superseded lower-bound wording.
 
 This is an unpublished source candidate. No existing package release changes.
 

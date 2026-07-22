@@ -18,6 +18,9 @@ This package provides:
 - **Utilities** — SSE stream parsing, MIME type detection, provider identification, streaming task lifecycle management
 - **Authorization presentation** — Shared UI-facing presentation helpers that
   render Swift Core LoadPlan results without defining protocol facts
+- **Workspace attachment presentation** — Exact CLI status DTO validation and
+  UI-ready identity, digest, scope, state, reason, and control models; no
+  attachment storage or mutation authority
 
 For KDNA authorization UI, this package may contain presentation helpers such as:
 
@@ -56,6 +59,12 @@ actions. It must not decide whether a KDNA can load.
 Saving or opening a file is not authorization. Presentation code must keep the
 active asset identity, exact version or digest, attachment scope, reason, and
 disable/switch/rollback actions visible.
+
+`KDNAWorkspaceAttachmentStatusDecoder` accepts only the exact bounded status
+JSON emitted by the runtime CLI. It rejects unknown fields and digest/snapshot
+mismatches, then maps records to content-neutral presentation state. Apps must
+still send every attach, enable/disable, switch, rollback, or remove operation
+to the exact runtime CLI; App Shared never reads `.kdna/attachments.json`.
 
 ## Platforms
 

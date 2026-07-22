@@ -19,10 +19,10 @@ crypto profiles, or runtime projection policy.
 
 ## Current Adapter
 
-The package manifest declares a `0.4.0` lower bound and does not pin an exact
-Swift Core revision. This published package predates the current Core contract,
-so compatibility must be established at an exact resolved coordinate before a
-release claim. Apps should create
+The unpublished source candidate pins exact Swift Core main
+`95f638e2f0472a375704fb5fe2f057de0cb4cb07`. The published package line
+predates that coordinate, so this source evidence is not a release claim. Apps
+should create
 `KDNALoadPlanPresentationInput` from the Core LoadPlan fields they receive and
 pass it to:
 
@@ -49,3 +49,9 @@ Apps must distinguish file storage, attachment, authorization, applicability,
 and load. They must expose active identity, exact version or digest, scope,
 reason, and disable/switch/rollback controls; presentation helpers do not create
 those permissions.
+
+Workspace attachment presentation starts from exact runtime CLI status JSON,
+not direct record reads. `KDNAWorkspaceAttachmentStatusDecoder` rejects unknown
+or malformed fields and `KDNAWorkspaceAttachmentPresentation` exposes only
+content-neutral state and controls. It does not decide task applicability,
+authorization, or mutation success.
