@@ -4,8 +4,17 @@ import KDNACore
 // MARK: - Shared types for native KDNA applications
 
 public struct KDNAAppConfig {
-    public static let kdnaHome = FileManager.default.homeDirectoryForCurrentUser
-        .appendingPathComponent(".kdna")
+    public static let kdnaHome: URL = {
+#if os(macOS)
+        FileManager.default.homeDirectoryForCurrentUser
+            .appendingPathComponent(".kdna", isDirectory: true)
+#else
+        FileManager.default.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        )[0].appendingPathComponent("KDNA", isDirectory: true)
+#endif
+    }()
     public static let packagesDir = kdnaHome.appendingPathComponent("packages")
     public static let domainsDir = kdnaHome.appendingPathComponent("domains")
 }

@@ -4,12 +4,10 @@
 
 Shared Swift package for platform-neutral app infrastructure used by KDNA Chat, KDNA Studio, and KDNA iOS apps.
 
-> **Status: recertification pending.** The package manifest declares
-> `kdna-core-swift` with a `0.4.0` lower bound and `Package.resolved` still
-> resolves `0.4.0`, while the current published Swift Core line is `0.20.x`.
-> This package predates the current Swift Core contract and must not be
-> treated as compatible with it until exact-coordinate recertification lands.
-> See the dependency note under Scope below.
+> **Status: pre-release recertification candidate.** The package manifest and
+> resolved graph pin final Swift Core main
+> `95f638e2f0472a375704fb5fe2f057de0cb4cb07`. This is source-candidate
+> compatibility evidence, not a new App Shared or Swift Core release.
 
 ## Scope
 
@@ -28,10 +26,9 @@ For KDNA authorization UI, this package may contain presentation helpers such as
 - license status view models
 - shared open/attachment error presentation
 
-The published package manifest declares `kdna-core-swift` with a `0.4.0` lower
-bound rather than an exact pin. This repository predates the current Swift Core
-contract and requires exact-coordinate recertification before it can claim
-current compatibility. Apps should map verified Core output into
+The unpublished recertification candidate pins one exact final Swift Core main
+revision. The published App Shared line still predates that coordinate. Apps
+should map verified Core output into
 `KDNALoadPlanPresentationInput` and render it through
 `KDNAAuthorizationPresentation`.
 
