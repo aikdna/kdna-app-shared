@@ -16,6 +16,9 @@
 
 import SwiftUI
 
+#if os(macOS)
+import AppKit
+
  
 public extension View {
     ///
@@ -283,3 +286,4 @@ private struct OnSwipe: ViewModifier {
             }
     }
 }
+#endif
