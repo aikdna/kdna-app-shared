@@ -2,73 +2,95 @@
 
 [![CI](https://github.com/aikdna/kdna-app-shared/actions/workflows/ci.yml/badge.svg)](https://github.com/aikdna/kdna-app-shared/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
-Shared Swift package for platform-neutral app infrastructure used by KDNA Chat, KDNA Studio, and KDNA iOS apps.
+**Shared Swift application infrastructure for KDNA-powered Apple apps: API
+clients, models, utilities, and UI presentation helpers for KDNA
+authorization and workspace attachment state.**
 
-> **Status: pre-release recertification candidate.** The package manifest and
-> resolved graph pin final Swift Core main
-> `95f638e2f0472a375704fb5fe2f057de0cb4cb07`. This is source-candidate
-> compatibility evidence, not a new App Shared or Swift Core release.
+This package is the platform-neutral building block used by KDNA apps. It
+provides:
 
-## Scope
+- **API layer** — protocol-based AI provider abstraction with streaming and
+  structured logging
+- **Models** — shared request/response types, search models, reasoning-effort
+  configuration
+- **Utilities** — SSE stream parsing, MIME type detection, provider
+  identification, streaming task lifecycle management
+- **Authorization presentation** — UI-facing presentation helpers that render
+  KDNA Core LoadPlan results without defining protocol facts
+- **Workspace attachment presentation** — validation and UI-ready models for the
+  exact CLI status output (identity, digest, scope, state, reason, control
+  actions)
 
-This package provides:
+> New to KDNA? → [KDNA Core](https://github.com/aikdna/kdna)
+>
+> Need the Swift protocol/runtime implementation? →
+> [kdna-core-swift](https://github.com/aikdna/kdna-core-swift)
+>
+> Building an authoring app? →
+> [kdna-studio-swift](https://github.com/aikdna/kdna-studio-swift)
 
-- **API layer** — Protocol-based AI provider abstraction (`APIProtocol`, `BaseAPIHandler`), streaming support, structured logging
-- **Models** — Shared request/response types, search models (Tavily, Exa), reasoning effort configuration
-- **Utilities** — SSE stream parsing, MIME type detection, provider identification, streaming task lifecycle management
-- **Authorization presentation** — Shared UI-facing presentation helpers that
-  render Swift Core LoadPlan results without defining protocol facts
-- **Workspace attachment presentation** — Exact CLI status DTO validation and
-  UI-ready identity, digest, scope, state, reason, and control models; no
-  attachment storage or mutation authority
+---
 
-For KDNA authorization UI, this package may contain presentation helpers such as:
+## Install
 
-- LoadPlan-to-UI presentation state
-- Keychain-backed SecretStore adapters
-- license status view models
-- shared open/attachment error presentation
+Add the dependency to your `Package.swift`:
 
-The unpublished recertification candidate pins one exact final Swift Core main
-revision. The published App Shared line still predates that coordinate. Apps
-should map verified Core output into
-`KDNALoadPlanPresentationInput` and render it through
-`KDNAAuthorizationPresentation`.
+```swift
+.package(url: "https://github.com/aikdna/kdna-app-shared.git", from: "0.5.0")
+```
 
-See [Docs/AUTHORIZATION_PRESENTATION.md](Docs/AUTHORIZATION_PRESENTATION.md).
+Then add `KDNAAppShared` to your target dependencies:
+
+```swift
+.product(name: "KDNAAppShared", package: "kdna-app-shared")
+```
+
+Requires macOS 13+ or iOS 16+.
+
+---
+
+## Quick start
+
+1. **Get a LoadPlan from Core.** Run the exact runtime `kdna-core-swift` against
+   a `.kdna` file to obtain the official LoadPlan result.
+2. **Map it to presentation state.** Translate the Core output into
+   `KDNALoadPlanPresentationInput`.
+3. **Render through `KDNAAuthorizationPresentation`.** The helpers turn Core
+   states into labels, severity, symbols, and actions for your authorization UI.
+
+For workspace attachments, feed the exact CLI status JSON to
+`KDNAWorkspaceAttachmentStatusDecoder`. It accepts only the bounded status
+output emitted by the runtime CLI, rejects unknown fields and digest/snapshot
+mismatches, and maps records to content-neutral presentation state.
+
+---
 
 ## What this package is NOT
 
-- Not a KDNA protocol runtime (use `kdna-core-swift`)
-- Not an authoring engine (use `kdna-studio-swift`)
+- Not a KDNA protocol runtime — use `kdna-core-swift`
+- Not an authoring engine — use `kdna-studio-swift`
 - Not a UI framework
 - Not the source of truth for access modes, entitlement profiles, LoadPlan
   states, crypto profiles, import security, or runtime projection policy
 
-## Dependencies
+Presentation code must keep the active asset identity, exact version or digest,
+attachment scope, reason, and disable/switch/rollback actions visible. It must
+not decide whether a KDNA can load, and it never reads or parses
+`.kdna/attachments.json`. Saving or opening a file is not authorization.
 
-- [kdna-core-swift](https://github.com/aikdna/kdna-core-swift) — KDNA Core
+---
 
-`kdna-app-shared` must import protocol/runtime facts from `kdna-core-swift`.
-KDNA Chat and KDNA Studio should not define authorization state by reading raw
-manifest fields in this package.
+## Status
 
-This package may translate Core states into labels, severity, symbols, and
-actions. It must not decide whether a KDNA can load.
+- **Pre-release.** The package pins the published Swift Core `0.21.0` release
+  and is source-compatibility evidence, not an App Shared or Swift Core
+  release.
+- App teams should map verified Core output into
+  `KDNALoadPlanPresentationInput` and render it through
+  `KDNAAuthorizationPresentation`.
 
-Saving or opening a file is not authorization. Presentation code must keep the
-active asset identity, exact version or digest, attachment scope, reason, and
-disable/switch/rollback actions visible.
-
-`KDNAWorkspaceAttachmentStatusDecoder` accepts only the exact bounded status
-JSON emitted by the runtime CLI. It rejects unknown fields and digest/snapshot
-mismatches, then maps records to content-neutral presentation state. Apps must
-still send every attach, enable/disable, switch, rollback, or remove operation
-to the exact runtime CLI; App Shared never reads `.kdna/attachments.json`.
-
-## Platforms
-
-macOS 13+ / iOS 16+
+See [Docs/AUTHORIZATION_PRESENTATION.md](Docs/AUTHORIZATION_PRESENTATION.md)
+for the detailed presentation contract.
 
 ## License
 
