@@ -14,7 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aikdna/kdna-core-swift.git",
       "state" : {
-        "revision" : "95f638e2f0472a375704fb5fe2f057de0cb4cb07"
+        "revision" : "1e13ef5f1c9283ddf810268218ac406234d25eb7",
+        "version" : "0.21.0"
       }
     }
   ],
