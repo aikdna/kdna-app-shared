@@ -92,6 +92,14 @@ not decide whether a KDNA can load, and it never reads or parses
 See [Docs/AUTHORIZATION_PRESENTATION.md](Docs/AUTHORIZATION_PRESENTATION.md)
 for the detailed presentation contract.
 
+
+## Official packages
+
+Official KDNA packages are published under the `@aikdna` npm scope and the
+`aikdna` name on PyPI. The unscoped npm package `kdna` is not affiliated with
+the KDNA project. Install only from the official coordinates shown in this
+README.
+
 ## License
 
 Apache-2.0
