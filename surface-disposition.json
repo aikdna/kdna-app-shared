@@ -1,0 +1,29 @@
+{
+  "format": "kdna.app-shared-surface-disposition/1",
+  "active_added": [
+    "KDNAReadPresentation",
+    "KDNAReadPresentationStates",
+    "KDNAReadPresentationContent"
+  ],
+  "active_preserved": [
+    "KDNAAuthorizationPresentationSeverity",
+    "API/model/utility/shared types",
+    "KDNAWorkspaceAttachmentStatusDecoder and relation presentation"
+  ],
+  "excluded_historical_files": [
+    "Sources/KDNAAppShared/AuthorizationPresentation.swift",
+    "Tests/KDNAAppSharedTests/AuthorizationPresentationTests.swift"
+  ],
+  "retired_public_symbols": [
+    "KDNALoadPlanPresentationInput",
+    "KDNAAuthorizationPresentation"
+  ],
+  "retired_members": [
+    "canLoadNow",
+    "primaryActionTitle from authorization presentation"
+  ],
+  "runtime_capsule": "No active adapter or constructor; the prior package did not implement one.",
+  "workspace": "Legacy CLI 0.1 relation DTO remains a separate display-only surface; no current Read input or authority bridge.",
+  "protocol_parser_added": false,
+  "external_product_code_copied": false
+}

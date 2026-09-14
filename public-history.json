@@ -1,0 +1,206 @@
+{
+  "format": "kdna.app-shared-public-history/1",
+  "original_commit": "344a655bebf17bd7fafbedae53c7f3826befa08e",
+  "original_files": [
+    {
+      "original_path": ".github/CODEOWNERS",
+      "sha256": "e7622c273294710bf60bf264a76bd7fc0ffa29eadcd76a1ae52ae60b8d1240ef",
+      "preserved_at": ".github/CODEOWNERS"
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "90ab5f515eb14ff2c5755be2c3ec74084a4d9e7b20785a5c0f730ba361c2b54e",
+      "preserved_at": ".github/ISSUE_TEMPLATE/bug_report.md"
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "5847c1beffdd083eaf9d90dc13534a35e6341c0503d93bccee7b0065222c883c",
+      "preserved_at": ".github/ISSUE_TEMPLATE/feature_request.md"
+    },
+    {
+      "original_path": ".github/dependabot.yml",
+      "sha256": "d31e7d412635f775a9cf6e9e9f871ae58e8e0d24ef84dcc9de50905d5035e045",
+      "preserved_at": ".github/dependabot.yml"
+    },
+    {
+      "original_path": ".github/pull_request_template.md",
+      "sha256": "8e278b07f11d6b016d9654f70b3181975381c57b6c8e8a7cebee50c62298e0a3",
+      "preserved_at": ".github/pull_request_template.md"
+    },
+    {
+      "original_path": ".github/workflows/ci.yml",
+      "sha256": "7c6641930e3006856958052b177794685bd8e1dfe55297169e435a0a2688fad4",
+      "preserved_at": "retired/.github/workflows/ci.yml"
+    },
+    {
+      "original_path": ".github/workflows/stale.yml",
+      "sha256": "7ec069997bc05a61e05f6e1219d1be97145e81814b3c2e478141fa7f77ce0941",
+      "preserved_at": ".github/workflows/stale.yml"
+    },
+    {
+      "original_path": ".gitignore",
+      "sha256": "c47b24ba67c162fbfb1383762d9ec5577d4a20ddbfcb6447e9d0a7a4e7440072",
+      "preserved_at": "retired/.gitignore"
+    },
+    {
+      "original_path": "CHANGELOG.md",
+      "sha256": "197ac2686b5f08d5d8631abece54a72bf73991493e8b335c535814f5f45e01e9",
+      "preserved_at": "retired/CHANGELOG.md"
+    },
+    {
+      "original_path": "CODE_OF_CONDUCT.md",
+      "sha256": "28d93279b4eb766bee089f500dedc0c1a49e300d10330c89b8629adfe389d961",
+      "preserved_at": "CODE_OF_CONDUCT.md"
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "sha256": "02af34333998a68e116ff261ffce6a9cc2197e7ac7668b53235cc5ba7d97c157",
+      "preserved_at": "retired/CONTRIBUTING.md"
+    },
+    {
+      "original_path": "Docs/AUTHORIZATION_PRESENTATION.md",
+      "sha256": "6503f13b55363f1b187c926850613fdcf514f8d0bc350e705ccef56a5e5a8f46",
+      "preserved_at": "retired/Docs/AUTHORIZATION_PRESENTATION.md"
+    },
+    {
+      "original_path": "LICENSE",
+      "sha256": "699a9bdd9d3fb95f2146586a5fb1d7a6a6197a43422914f86869fed84c34222c",
+      "preserved_at": "LICENSE"
+    },
+    {
+      "original_path": "NOTICE",
+      "sha256": "8b96b53fff19ebdc4750d52c6117051f2cbacb120204394166d8f12b9aebae33",
+      "preserved_at": "NOTICE"
+    },
+    {
+      "original_path": "Package.resolved",
+      "sha256": "8cc28cd6f97765dfb432b21ec62d4b1c581c7291a52e2994565931310a528cbb",
+      "preserved_at": "retired/Package.resolved"
+    },
+    {
+      "original_path": "Package.swift",
+      "sha256": "f5796d92f35afb8a456ac9d362c24ef932a3e92ffb2f7f5f83cd838ba814dd07",
+      "preserved_at": "retired/Package.swift"
+    },
+    {
+      "original_path": "README.md",
+      "sha256": "b83021430fb924c9ab493ff8ed9a06737139f37ade889435277e7e6ad8c08787",
+      "preserved_at": "retired/README.md"
+    },
+    {
+      "original_path": "SECURITY.md",
+      "sha256": "b6ee11b78bf3e93bc42c1481a6f0678818752fb7ad598c93d4f7d9d6ad198744",
+      "preserved_at": "retired/SECURITY.md"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/API/APIProtocol.swift",
+      "sha256": "00a20bc9e199cc295ac4031122884a37ff2b0ced4222143fc6433c6cb8205195",
+      "preserved_at": "Sources/KDNAAppShared/API/APIProtocol.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/API/BaseAPIHandler.swift",
+      "sha256": "630100f987c1fa1e787d03b9f44f7d644789adac0f110ca4f07da7b3cb44dfbe",
+      "preserved_at": "Sources/KDNAAppShared/API/BaseAPIHandler.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/API/KDNALogger.swift",
+      "sha256": "62029760199c4cf9e94e5ec343c11a750a8ba30f9c85adcbca87f4335b67c3d0",
+      "preserved_at": "Sources/KDNAAppShared/API/KDNALogger.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/AuthorizationPresentation.swift",
+      "sha256": "02417a8e2457520e6cfd84379685f613ccb92c3ef312d8d6c29596ffe3b17631",
+      "preserved_at": "Sources/KDNAAppShared/AuthorizationPresentation.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/ExaModels.swift",
+      "sha256": "4199aed1d8a6b734b98a27cd6ce67155ad18ac91fe1b590b9f762da9793c86f9",
+      "preserved_at": "Sources/KDNAAppShared/Models/ExaModels.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/Models.swift",
+      "sha256": "487b45b28e34dd61407fdcd9588ba6f291be99ed3008cfcc7aec1f6112567439",
+      "preserved_at": "Sources/KDNAAppShared/Models/Models.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/ReasoningEffort.swift",
+      "sha256": "55a6bbf017327d302e1659e03d831623ef1453bcb0bfc47ce0805f7ce1125358",
+      "preserved_at": "Sources/KDNAAppShared/Models/ReasoningEffort.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift",
+      "sha256": "1571a86a7b45e808136dbc8c374b4774311270cd769db87897033ba30458ff2e",
+      "preserved_at": "Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/SearchModels.swift",
+      "sha256": "f02a55d5145b0f85d2810c2071cf05d81db72342c719708880f8d5493c14b22f",
+      "preserved_at": "Sources/KDNAAppShared/Models/SearchModels.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Models/TavilyModels.swift",
+      "sha256": "dfa26b5f18582ae66ff0d8042bb66d73cad73d2a7ef4a9cc9d3647f09f5dc6e5",
+      "preserved_at": "Sources/KDNAAppShared/Models/TavilyModels.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/SharedTypes.swift",
+      "sha256": "c8f12f9fa0a3fb63c5d0ff7f9e2358ce28b1016c17770bd1d561d91f6fb772bb",
+      "preserved_at": "Sources/KDNAAppShared/SharedTypes.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/AttachmentMimeTypeSniffer.swift",
+      "sha256": "6f951d146f83dd8e2efb007791bb33c2a4c358412d126ddda6ebf73ce679cda4",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/AttachmentMimeTypeSniffer.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/ModelMetadata.swift",
+      "sha256": "87063146c4e69ce47bbe6991ff3358394232d152c167b97eb6978337b7c24115",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/ModelMetadata.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/ProviderID.swift",
+      "sha256": "d4b8693ee90637827c32354a359a8b97af74a335634abfaaa17f1ac69aa11d30",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/ProviderID.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/SSEStreamParser.swift",
+      "sha256": "2ae0856a58018ab7c048d1ae15b8dbc1677bd042a5537a06d15c5922f111c12c",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/SSEStreamParser.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/StreamingTaskController.swift",
+      "sha256": "d9283ea9d30d7302ef43d3d5cb7dbaa9a504c7a4dc76615376f5c86efd697480",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/StreamingTaskController.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/SwipeModifier.swift",
+      "sha256": "20b6f9e6187e32e4059e92495a309bdbd7a6b870059ef7577c5bcc5ba6dcb6de",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/SwipeModifier.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/Utilities/WebSearchError.swift",
+      "sha256": "4e9141d11aed7e4f69960fb995bf92f560cc384b0e111b94c7a125c054cd1004",
+      "preserved_at": "Sources/KDNAAppShared/Utilities/WebSearchError.swift"
+    },
+    {
+      "original_path": "Sources/KDNAAppShared/WorkspaceAttachmentPresentation.swift",
+      "sha256": "21304c1e84309e6174b40be010bc7f756d5506212aafae1c6f9a07c4e977d21a",
+      "preserved_at": "retired/Sources/KDNAAppShared/WorkspaceAttachmentPresentation.swift"
+    },
+    {
+      "original_path": "Tests/KDNAAppSharedTests/AuthorizationPresentationTests.swift",
+      "sha256": "3aa205684a33e3522f2c3ca746a057f4ae685583d95cb38f369330cd3b1febb1",
+      "preserved_at": "Tests/KDNAAppSharedTests/AuthorizationPresentationTests.swift"
+    },
+    {
+      "original_path": "Tests/KDNAAppSharedTests/WorkspaceAttachmentPresentationTests.swift",
+      "sha256": "831202855bc97f3d0290c653026ceb9ab29d65a8f722c6879dbcbe3d887758ac",
+      "preserved_at": "Tests/KDNAAppSharedTests/WorkspaceAttachmentPresentationTests.swift"
+    },
+    {
+      "original_path": "scripts/check_public_surface.py",
+      "sha256": "96a653192d85e7551054b154bf2891584fcdae603eac922d375df481f1e7d140",
+      "preserved_at": "retired/scripts/check_public_surface.py"
+    }
+  ]
+}

@@ -8,20 +8,20 @@ let package = Package(
         .library(name: "KDNAAppShared", targets: ["KDNAAppShared"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/aikdna/kdna-core-swift.git", revision: "7f686046ce8bae968f9645420ff736f5a0aa2091"),
+        .package(
+            url: "https://github.com/aikdna/kdna-core-swift.git",
+            from: "0.21.0"
+        ),
     ],
     targets: [
         .target(
             name: "KDNAAppShared",
             dependencies: [.product(name: "KDNACore", package: "kdna-core-swift")],
-            path: "Sources/KDNAAppShared",
-            exclude: ["AuthorizationPresentation.swift"]
+            path: "Sources/KDNAAppShared"
         ),
         .testTarget(
             name: "KDNAAppSharedTests",
-            dependencies: ["KDNAAppShared"],
-            exclude: ["AuthorizationPresentationTests.swift"],
-            resources: [.copy("Fixtures")]
+            dependencies: ["KDNAAppShared"]
         ),
     ]
 )

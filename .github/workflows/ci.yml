@@ -5,21 +5,12 @@ permissions:
 jobs:
   build:
     runs-on: macos-14
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - name: Audit public surface
+      - name: Check public inputs, dependency and preserved history
         run: python3 scripts/check_public_surface.py
-      - name: Build
-        run: swift build
-      - name: Test
-        run: swift test
-      - name: Build generic iOS target
-        run: >-
-          xcodebuild -quiet -scheme kdna-app-shared
-          -destination 'generic/platform=iOS'
-          -derivedDataPath "$RUNNER_TEMP/kdna-app-shared-ios-derived"
-          -clonedSourcePackagesDirPath "$RUNNER_TEMP/kdna-app-shared-ios-packages"
-          -packageCachePath "$RUNNER_TEMP/kdna-app-shared-ios-cache"
-          -disableAutomaticPackageResolution
-          -onlyUsePackageVersionsFromResolvedFile
-          CODE_SIGNING_ALLOWED=NO build
+      - name: Prove regression checks reject hostile changes
+        run: python3 scripts/test_public_surface.py
+      - name: Build, test and consume the public Apple library
+        run: python3 scripts/verify_native.py --work-dir "${{ runner.temp }}/kdna-app-shared-native" --ios
