@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Exercise real public checks using bounded, in-memory hostile changes."""
 import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 import check_public_surface as gate
@@ -48,6 +52,45 @@ class PublicSurfaceTests(unittest.TestCase):
 
     def test_private_temporary_path(self):
         self.reject(lambda f: f.update({'README.md': f['README.md'] + b'\n/private/' + b'tmp/kdna-fixture'}), 'private machine path')
+
+    def test_csv_text_path(self):
+        self.reject(lambda f: f.update({'public-example.csv': b'field\n/' + b'Users/example/private/'}), 'private machine path')
+
+    def test_extensionless_text_path(self):
+        self.reject(lambda f: f.update({'public-example': b'/' + b'Users/example/private/'}), 'private machine path')
+
+    def test_arbitrary_suffix_private_token(self):
+        sentinel = 'synthetic-private-token'
+        with patch.object(gate, 'FORBIDDEN_HASHES', gate.FORBIDDEN_HASHES | {gate.digest(sentinel.encode())}):
+            self.reject(lambda f: f.update({'public-example.data': sentinel.encode()}), 'private name in text')
+
+    def test_non_utf8_arbitrary_suffix_keeps_text_coverage(self):
+        self.reject(lambda f: f.update({'public-example.data': b'\xff\n/' + b'Users/example/private/'}), 'private machine path')
+
+    def test_known_text_invalid_utf8_still_rejected(self):
+        self.reject(lambda f: f.update({'README.md': f['README.md'] + b'\xff'}), 'invalid UTF-8')
+
+    def test_large_arbitrary_suffix_has_no_size_exemption(self):
+        self.reject(lambda f: f.update({'public-example.data': b'x' * 1_000_001 + b'\n/' + b'Users/example/private/'}), 'private machine path')
+
+    def test_placeholder_identity_after_long_non_email_text(self):
+        self.reject(lambda f: f.update({'public-example.data': b'x' * 1_000_001 + b'\nAuthor <test@' + b'example.invalid>'}), 'placeholder identity')
+
+    def test_cli_rejects_staged_text_regardless_of_suffix(self):
+        for filename in ['public-example.csv', 'public-example']:
+            with self.subTest(filename=filename), tempfile.TemporaryDirectory(prefix='public-surface-') as directory:
+                root = Path(directory)
+                for name, raw in FILES.items():
+                    target = root / name
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(raw)
+                subprocess.run(['git', 'init', '-q', str(root)], check=True)
+                (root / filename).write_bytes(b'/' + b'Users/example/private/')
+                subprocess.run(['git', '-C', str(root), 'add', '--all'], check=True)
+                result = subprocess.run([sys.executable, str(root / 'scripts/check_public_surface.py')],
+                    cwd=root, capture_output=True, text=True, check=False)
+                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                self.assertIn('private machine path: ' + filename, result.stderr)
 
     def test_placeholder_identity(self):
         self.reject(lambda f: f.update({'README.md': f['README.md'] + b'\nAuthor <test@' + b'example.invalid>'}), 'placeholder identity')
