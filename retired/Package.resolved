@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "argon2kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rkreutz/Argon2Kit.git",
+      "state" : {
+        "revision" : "87b9ca9c42304b8c6a5c14d7f6d6a0342917e71c",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "kdna-core-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aikdna/kdna-core-swift.git",
+      "state" : {
+        "revision" : "1e13ef5f1c9283ddf810268218ac406234d25eb7",
+        "version" : "0.21.0"
+      }
+    }
+  ],
+  "version" : 2
+}

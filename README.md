@@ -1,105 +1,62 @@
 # KDNA App Shared
 
-[![CI](https://github.com/aikdna/kdna-app-shared/actions/workflows/ci.yml/badge.svg)](https://github.com/aikdna/kdna-app-shared/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+Shared Swift API clients, request/response models, stream utilities, and display helpers for Apple applications.
 
-**Shared Swift application infrastructure for KDNA-powered Apple apps: API
-clients, models, utilities, and UI presentation helpers for KDNA
-authorization and workspace attachment state.**
+This pre-release package exposes the current Read presentation contract at the candidate coordinate in [public-contract-binding.json](public-contract-binding.json). SwiftPM resolves the exact public Core Git revision in `Package.swift` and `Package.resolved`. The binding preserves the corresponding Core contract and source-archive provenance; it does not assert a package tag or registry release.
 
-This package is the platform-neutral building block used by KDNA apps. It
-provides:
+The package declares macOS 13 and iOS 16 deployment targets. CI runs macOS builds, tests and public consumers, plus generic iOS device compilation. The iOS leg does not establish runtime behavior on a physical device.
 
-- **API layer** — protocol-based AI provider abstraction with streaming and
-  structured logging
-- **Models** — shared request/response types, search models, reasoning-effort
-  configuration
-- **Utilities** — SSE stream parsing, MIME type detection, provider
-  identification, streaming task lifecycle management
-- **Authorization presentation** — UI-facing presentation helpers that render
-  KDNA Core LoadPlan results without defining protocol facts
-- **Workspace attachment presentation** — validation and UI-ready models for the
-  exact CLI status output (identity, digest, scope, state, reason, control
-  actions)
+## Installation
 
-> New to KDNA? → [KDNA Core](https://github.com/aikdna/kdna)
->
-> Need the Swift protocol/runtime implementation? →
-> [kdna-core-swift](https://github.com/aikdna/kdna-core-swift)
->
-> Building an authoring app? →
-> [kdna-studio-swift](https://github.com/aikdna/kdna-studio-swift)
-
----
-
-## Install
-
-Add the dependency to your `Package.swift`:
+Clone [aikdna/kdna-app-shared](https://github.com/aikdna/kdna-app-shared), check out the exact revision you intend to use, and add it as a SwiftPM path dependency. Select the `KDNAAppShared` product in your application target. The Core dependency is resolved from its pinned public Git coordinate; a sibling Core checkout is not required.
 
 ```swift
-.package(url: "https://github.com/aikdna/kdna-app-shared.git", from: "0.5.0")
-```
-
-Then add `KDNAAppShared` to your target dependencies:
-
-```swift
+.package(path: "../kdna-app-shared")
+// In the application's target dependencies:
 .product(name: "KDNAAppShared", package: "kdna-app-shared")
 ```
 
-Requires macOS 13+ or iOS 16+.
+## Public Read presentation
 
----
+Pass the result of `KDNARead.readBytes`, `readFile`, or `readSnapshot` to the display adapter:
 
-## Quick start
+```swift
+import KDNACore
+import KDNAAppShared
 
-1. **Get a LoadPlan from Core.** Run the exact runtime `kdna-core-swift` against
-   a `.kdna` file to obtain the official LoadPlan result.
-2. **Map it to presentation state.** Translate the Core output into
-   `KDNALoadPlanPresentationInput`.
-3. **Render through `KDNAAuthorizationPresentation`.** The helpers turn Core
-   states into labels, severity, symbols, and actions for your authorization UI.
+let result = await KDNARead.readBytes(
+    bytes, request: request, control: trustedControl, host: trustedHost
+)
+let presentation = KDNAReadPresentation.from(
+    readResult: result, assetTitle: "Review"
+)
+// Render presentation.statusText, diagnosticCodes and observedStates.
+```
 
-For workspace attachments, feed the exact CLI status JSON to
-`KDNAWorkspaceAttachmentStatusDecoder`. It accepts only the bounded status
-output emitted by the runtime CLI, rejects unknown fields and digest/snapshot
-mismatches, and maps records to content-neutral presentation state.
+Current binding uses public Core/IR/Read contracts `0.3.0`/`0.2.0`/`0.2.0` and the component definition digest declared in the binding. Ordinary, taxonomy and differential judgments stay in the caller's actual public Read content. Method absence and declared empty collections are preserved by Core/Read; this content-neutral display adapter does not collapse, reinterpret, or copy those bodies.
 
----
+The adapter distinguishes a Read envelope, admission rejection, control without a body, and unconfirmed transport. It keeps observed identity, version, digests, request correlation, state strings, and delivery information separate. It does not copy the disclosed body into the presentation.
 
-## What this package is NOT
+“Read content available” describes the supplied response. It does not grant permission to reuse content, load a runtime, execute an action, or create model context. The adapter cannot authenticate a caller-supplied `KDNAValue`; callers must retain the actual public Read result and the trusted Host boundary. Delivery labels are the returned local Read facts, not proof of remote consumption.
 
-- Not a KDNA protocol runtime — use `kdna-core-swift`
-- Not an authoring engine — use `kdna-studio-swift`
-- Not a UI framework
-- Not the source of truth for access modes, entitlement profiles, LoadPlan
-  states, crypto profiles, import security, or runtime projection policy
+The old `KDNALoadPlanPresentationInput` and `KDNAAuthorizationPresentation` interfaces are excluded from current targets. The former `canLoadNow` and password/license/runtime actions have no compatibility shim. Their source and tests remain historical material. See [Docs/AUTHORIZATION_PRESENTATION.md](Docs/AUTHORIZATION_PRESENTATION.md) and [surface-disposition.json](surface-disposition.json).
 
-Presentation code must keep the active asset identity, exact version or digest,
-attachment scope, reason, and disable/switch/rollback actions visible. It must
-not decide whether a KDNA can load, and it never reads or parses
-`.kdna/attachments.json`. Saving or opening a file is not authorization.
+## Other shared infrastructure
 
----
+API provider abstractions, models, reasoning and attachment compatibility helpers, SSE parsing, MIME detection, provider identifiers, and stream lifecycle helpers retain their existing behavior. Importing this package does not initialize an API service or perform a network request.
 
-## Status
+The existing `KDNAWorkspaceAttachmentStatusDecoder` accepts the bounded legacy CLI `kdna.workspace-attachments/0.1.0` status representation. Its enabled/disabled labels describe workspace relationships. Its enable/disable/switch/rollback/remove values name UI requests that a caller may handle; they do not authorize or perform those operations. This separate view is not current public Read input and is never converted into Read permission by this package. It does not read `.kdna/attachments.json`.
 
-- **Pre-release.** The package pins the published Swift Core `0.21.0` release
-  and is source-compatibility evidence, not an App Shared or Swift Core
-  release.
-- App teams should map verified Core output into
-  `KDNALoadPlanPresentationInput` and render it through
-  `KDNAAuthorizationPresentation`.
+## Verification
 
-See [Docs/AUTHORIZATION_PRESENTATION.md](Docs/AUTHORIZATION_PRESENTATION.md)
-for the detailed presentation contract.
+```sh
+python3 scripts/check_public_surface.py
+python3 scripts/test_public_surface.py
+python3 scripts/verify_native.py --work-dir ../kdna-app-shared-check --ios
+```
 
+Use a new work directory outside the checkout. The native runner builds debug and release, runs the complete current test suite, builds and runs independent public-API consumers in both configurations, proves retired types cannot compile, and builds for a generic iOS device without signing. Omit `--ios` for macOS-only verification. Build products and caches use the supplied directory.
 
-## Official packages
+The suite uses real Core/Read calls and synthetic component fixtures, rejected and mixed display inputs, and workspace/infrastructure regressions. Exact current source and test bytes are recorded in `public-inputs.json`. Historical code remains excluded from active targets; preserved original public files are inventoried in `public-history.json`.
 
-Official KDNA packages are published under the `@aikdna` npm scope and the
-`aikdna` name on PyPI. The unscoped npm package `kdna` is not affiliated with
-the KDNA project. Install only from the official coordinates shown in this
-README.
-
-## License
-
-Apache-2.0
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).

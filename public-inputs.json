@@ -1,0 +1,153 @@
+{
+  "format": "kdna.app-shared-public-inputs/1",
+  "files": [
+    {
+      "path": "Sources/KDNAAppShared/API/APIProtocol.swift",
+      "sha256": "00a20bc9e199cc295ac4031122884a37ff2b0ced4222143fc6433c6cb8205195"
+    },
+    {
+      "path": "Sources/KDNAAppShared/API/BaseAPIHandler.swift",
+      "sha256": "630100f987c1fa1e787d03b9f44f7d644789adac0f110ca4f07da7b3cb44dfbe"
+    },
+    {
+      "path": "Sources/KDNAAppShared/API/KDNALogger.swift",
+      "sha256": "62029760199c4cf9e94e5ec343c11a750a8ba30f9c85adcbca87f4335b67c3d0"
+    },
+    {
+      "path": "Sources/KDNAAppShared/AuthorizationPresentation.swift",
+      "sha256": "02417a8e2457520e6cfd84379685f613ccb92c3ef312d8d6c29596ffe3b17631"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/ExaModels.swift",
+      "sha256": "4199aed1d8a6b734b98a27cd6ce67155ad18ac91fe1b590b9f762da9793c86f9"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/Models.swift",
+      "sha256": "487b45b28e34dd61407fdcd9588ba6f291be99ed3008cfcc7aec1f6112567439"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/ReasoningEffort.swift",
+      "sha256": "55a6bbf017327d302e1659e03d831623ef1453bcb0bfc47ce0805f7ce1125358"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/RequestMessagesTransformer.swift",
+      "sha256": "1571a86a7b45e808136dbc8c374b4774311270cd769db87897033ba30458ff2e"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/SearchModels.swift",
+      "sha256": "f02a55d5145b0f85d2810c2071cf05d81db72342c719708880f8d5493c14b22f"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Models/TavilyModels.swift",
+      "sha256": "dfa26b5f18582ae66ff0d8042bb66d73cad73d2a7ef4a9cc9d3647f09f5dc6e5"
+    },
+    {
+      "path": "Sources/KDNAAppShared/ReadPresentation.swift",
+      "sha256": "4d0fbba68d0c0b86ba06bee3216f09c297495a92bf80aae065c8c84a07d12714"
+    },
+    {
+      "path": "Sources/KDNAAppShared/SharedTypes.swift",
+      "sha256": "c8f12f9fa0a3fb63c5d0ff7f9e2358ce28b1016c17770bd1d561d91f6fb772bb"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/AttachmentMimeTypeSniffer.swift",
+      "sha256": "6f951d146f83dd8e2efb007791bb33c2a4c358412d126ddda6ebf73ce679cda4"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/ModelMetadata.swift",
+      "sha256": "87063146c4e69ce47bbe6991ff3358394232d152c167b97eb6978337b7c24115"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/ProviderID.swift",
+      "sha256": "d4b8693ee90637827c32354a359a8b97af74a335634abfaaa17f1ac69aa11d30"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/SSEStreamParser.swift",
+      "sha256": "2ae0856a58018ab7c048d1ae15b8dbc1677bd042a5537a06d15c5922f111c12c"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/StreamingTaskController.swift",
+      "sha256": "d9283ea9d30d7302ef43d3d5cb7dbaa9a504c7a4dc76615376f5c86efd697480"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/SwipeModifier.swift",
+      "sha256": "20b6f9e6187e32e4059e92495a309bdbd7a6b870059ef7577c5bcc5ba6dcb6de"
+    },
+    {
+      "path": "Sources/KDNAAppShared/Utilities/WebSearchError.swift",
+      "sha256": "4e9141d11aed7e4f69960fb995bf92f560cc384b0e111b94c7a125c054cd1004"
+    },
+    {
+      "path": "Sources/KDNAAppShared/WorkspaceAttachmentPresentation.swift",
+      "sha256": "454bdbf4894b7e11ff5dcc07369cce1560aa0813bcca83047aabfeb1169dc314"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/AuthorizationPresentationTests.swift",
+      "sha256": "3aa205684a33e3522f2c3ca746a057f4ae685583d95cb38f369330cd3b1febb1"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/CurrentComponentReadTests.swift",
+      "sha256": "0c26941e8d693df869750d8c28a36cb59a333769c9c3cd899664eb692a746b14"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/README.md",
+      "sha256": "2b0f55b07d7bbec1f7a4c38a95af01579e38a85b57c7121f921cb713314a4c2a"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/declared-empty.kdna",
+      "sha256": "f63a5b113e19c86cf4fada80188cb9e02ae4f242e3711160a8a0c120801ab763"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/differential.kdna",
+      "sha256": "8ec9bd3eb3303f97fa327c8299547ca0f0a6f3c530c0741f3b2e242e5f0f2fd3"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/full-trio.kdna",
+      "sha256": "17db6438674dbda46c259ed30dff367c55ed48fc29188039f77d1de7724e2127"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/no-method.kdna",
+      "sha256": "28994de22c01d6e744d3bd3e780e321ae469311be690b462c22b34b6b0ca4797"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/ordinary.kdna",
+      "sha256": "20d1058d8f5f647fec550072e5ddd7504da9d618aa6543dedd9f675626d10e6a"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/presence-only.kdna",
+      "sha256": "85bd43fc5aa5d76a4995087e13b00be623a5cacb6c02434b13bc9a8553cf86f7"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/taxonomy.kdna",
+      "sha256": "c8736a1175edd32c97162921c21a6c86573165acc5ee87aaa1dfd540282087f4"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/Components/wrong-D.kdna",
+      "sha256": "96a4f34448adee6b65ba0c5a44b8a742df6f7c38906c0c72b713f1a39f91c47a"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/Fixtures/scale-1.kdna",
+      "sha256": "38d9af6810315f26df62647e86ef5cb300f61b4218cc01a5b72c89c1a8fb7e24"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/ReadPresentationTests.swift",
+      "sha256": "1a4cfef8c43f7b90dd241538c33d0974e2024eb9eaf9da98dcd217e7d3a12bb6"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/SharedInfrastructureRegressionTests.swift",
+      "sha256": "bb77378a7d8f71c2382c217c9488d90d4d907c4304432d2014df5c5e873240e4"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/WorkspaceAttachmentPresentationTests.swift",
+      "sha256": "831202855bc97f3d0290c653026ceb9ab29d65a8f722c6879dbcbe3d887758ac"
+    },
+    {
+      "path": "Tests/KDNAAppSharedTests/WorkspaceAuthorityBoundaryTests.swift",
+      "sha256": "861ce7aff71f60eb097ee069a9dc43ea70ffc038c0b6f164d8a0c0338519ca62"
+    },
+    {
+      "path": "public-contract-binding.json",
+      "sha256": "2d30b1e479be17b8aaf047aa24a9dcccd08dd0329afedd4513088698b7c2c7c2"
+    }
+  ]
+}

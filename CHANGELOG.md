@@ -1,6 +1,35 @@
 # Changelog
 
-## Unreleased
+## 0.7.0-rc.components.1 — unpublished candidate
+
+- Resolve the pinned public Core Git dependency and align installation, contribution and security guidance with the current Read display contract.
+- Add exact input/history checks, hostile gate tests, independent debug/release public consumers, retired-type negative compilation and retained generic iOS coverage.
+
+- Bind to the exact public Swift Core component-semantics source archive and current Core/IR/Read tuple.
+- Preserve the Core source-archive and contract provenance alongside the exact Git dependency.
+- Exercise ordinary, taxonomy, differential, declaration-presence and component-rejection presentation using public Core/Read. The content-neutral adapter and retired surfaces retain their behavior.
+
+## 0.6.0-rc.public-read.2 — unpublished candidate
+
+- Require the displayed digest and writer/confirmation observations before a ready label.
+- Reject inconsistent receipt request/snapshot references and mixed legacy envelope fields.
+- Keep these checks within the display adapter; they do not authenticate supplied values or grant Read/action permission.
+
+## 0.6.0-rc.public-read.1 — unpublished candidate
+
+- Replace retired LoadPlan/canLoadNow presentation with display of actual public
+  Swift Core 0.3.1 Read results across four channels. Observed Read permission,
+  writer/confirmation and action authorization remain separate.
+- Exclude the old loading presentation source/tests from active targets while
+  preserving their historical bytes. No RuntimeCapsule or action capability is
+  produced.
+- Preserve unrelated API/model/utility behavior and the separate legacy CLI
+  workspace relationship view; relation state and action labels grant no Read
+  or execution permission.
+- Bind the local candidate to the exact accepted Swift Core source archive.
+  Fresh execution and independent acceptance are required before landing.
+
+## Historical pre-migration unreleased notes
 
 - Re-certify the presentation-only package against exact final Swift Core main
   `95f638e2f0472a375704fb5fe2f057de0cb4cb07` without moving protocol or

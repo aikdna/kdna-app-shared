@@ -1,0 +1,1 @@
+Synthetic public SDK and native-creation conformance examples. These are technical fixtures, not real editorial adoption, human confirmation or action authority. Authored sample statements are CC0 test material; no production assets or source credentials are included. The component cases exercise declaration presence, all three finite profiles and one invalid definition binding.

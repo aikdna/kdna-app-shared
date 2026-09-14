@@ -15,30 +15,45 @@ chance to address it.
 
 ## Supported Versions
 
-`kdna-app-shared` is a public beta support surface for shared KDNA Apple app
-infrastructure.
+`kdna-app-shared` is a pre-release package for shared Apple application infrastructure.
+Security support continues to track the latest tagged KDNA Protocol release in
+`aikdna/kdna` and the latest mainline pre-releases of `kdna-core-swift` and
+`kdna-app-shared`. Older Swift pre-release versions may receive critical
+security patches on a case-by-case basis.
 
-| Component | Supported Versions |
-|-----------|-------------------|
-| KDNA Protocol | Latest tagged release in `aikdna/kdna` |
-| kdna-core-swift | Latest mainline beta release |
-| kdna-app-shared | Latest mainline beta release |
+### Current dependency inputs
 
-Older Swift beta versions may receive critical security patches on a
-case-by-case basis.
+| Component | Current input |
+|-----------|---------------|
+| KDNA App Shared | Candidate coordinate in `public-contract-binding.json` |
+| KDNA Core Swift | Exact public Git revision in `Package.swift` and `Package.resolved` |
+| Core / canonical IR / Read | `kdna.core/0.3.0` / `kdna.canonical-ir/0.2.0` / `kdna.read/0.2.0` |
+
+The binding governs this candidate's tested contract; a new upstream commit
+does not automatically change its dependency inputs.
 
 ## About This Package
 
-This package (`kdna-app-shared`) is a **UI presentation layer** for KDNA authorization states. It does NOT implement cryptographic primitives itself.
+This package maps supplied public Read results into display values. It does
+not implement cryptographic primitives, authenticate caller-supplied values,
+disclose the Read body, produce a runtime capsule, or authorize actions.
+Applications must retain the actual Core/Read result and trusted provider
+boundary. A ready label or delivery label is not permission to reuse content
+or evidence of remote consumption.
 
-The security model for KDNA assets is defined and implemented in:
-
-- **`aikdna/kdna`** — Core protocol, crypto profiles, LoadPlan authorization, container validation
-- **`aikdna/kdna-core-swift`** — Swift runtime with crypto parity
+The legacy workspace relationship decoder is a separate display surface. Its
+relationship labels and action request names neither execute operations nor
+grant Read/action permission. The excluded loading presentation APIs remain
+historical and are not supported compatibility paths.
 
 For the KDNA Protocol security architecture, see
 [GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/docs/GOVERNANCE.md)
 in the main protocol repository.
+
+Report misleading ready states, identity/correlation mismatches, unintended
+body disclosure or authority confusion through the private channels above.
+Use synthetic data and include the exact package/dependency revision, toolchain
+and minimal reproduction. Do not include real credentials or private assets.
 
 ## Best Practices
 

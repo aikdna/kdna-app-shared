@@ -252,8 +252,6 @@ public enum KDNAWorkspaceAttachmentStatusDecoder {
     }
 }
 
-/// Names of relationship UI requests. These values do not grant or execute
-/// Read, loading, file mutation, or action permission.
 public enum KDNAWorkspaceAttachmentAction: String, Codable, Equatable, CaseIterable, Sendable {
     case enable
     case disable
@@ -263,8 +261,7 @@ public enum KDNAWorkspaceAttachmentAction: String, Codable, Equatable, CaseItera
 }
 
 /// UI-ready, content-neutral state. It never contains a judgment projection or
-/// an entitlement secret. Legacy relationship state is not a public Read
-/// decision; this view never supplies input to KDNAReadPresentation.
+/// an entitlement secret.
 public struct KDNAWorkspaceAttachmentPresentation: Codable, Equatable, Sendable, Identifiable {
     public let id: String
     public let identity: String
@@ -291,7 +288,7 @@ public struct KDNAWorkspaceAttachmentPresentation: Codable, Equatable, Sendable,
         ]
         if !attachment.history.isEmpty { actions.append(.rollback) }
         actions.append(.removeRelation)
-        let reason = "Workspace relation recorded"
+        let reason = "Approved workspace relation; task applicability remains Host-controlled."
         return KDNAWorkspaceAttachmentPresentation(
             id: attachment.attachmentID,
             identity: identity,
