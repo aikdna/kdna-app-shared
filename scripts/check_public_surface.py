@@ -14,8 +14,9 @@ TOKEN_PATTERN = re.compile(r"@[a-z][a-z0-9_-]*/[a-z][a-z0-9_-]*|[a-z][a-z0-9_-]*
 INTERNAL_ID = re.compile(r"\b[pP][dD]\d+\b")
 GENERATION = re.compile(r"(?<![A-Za-z0-9])[vV]\d+(?!\d|\.\d)")
 MACHINE_PATH = re.compile(r"/" + r"Users/(?!<user>/|you/|username/)[^/\s]+/|/private/" + r"tmp/kdna|/home/" + r"runner/work/[^\s]+|[A-Za-z]:\\Users\\[^\\\s]+\\", re.I)
-PLACEHOLDER_IDENTITY = re.compile(r"[\w.+-]+@[\w.-]+\.invalid\b")
-TEXT_SUFFIXES = {'.swift', '.py', '.json', '.md', '.yml', '.yaml', '.sh', '.txt', '.resolved'}
+# Start at the full local-part boundary to avoid quadratic retries on long text.
+PLACEHOLDER_IDENTITY = re.compile(r"(?<![\w.+-])[\w.+-]+@[\w.-]+\.invalid\b")
+STRICT_UTF8_SUFFIXES = {'.swift', '.py', '.json', '.md', '.yml', '.yaml', '.sh', '.txt', '.resolved'}
 CORE_URL = 'https://github.com/aikdna/kdna-core-swift.git'
 
 
@@ -55,11 +56,16 @@ def surface_errors(files):
         require(not GENERATION.search(path), f'generation label in path: {path}')
         for token in TOKEN_PATTERN.findall(path):
             require(digest(token.lower().encode()) not in FORBIDDEN_HASHES, f'private name in path: {path}')
-        if Path(path).suffix not in TEXT_SUFFIXES: continue
-        try: text = raw.decode('utf8')
-        except UnicodeError:
-            errors.append(f'invalid UTF-8: {path}')
-            continue
+        if Path(path).suffix in STRICT_UTF8_SUFFIXES:
+            try: text = raw.decode('utf8')
+            except UnicodeError:
+                errors.append(f'invalid UTF-8: {path}')
+                continue
+        else:
+            if b'\0' in raw: continue
+            # An arbitrary suffix is not a privacy exemption. Preserve readable
+            # portions of non-NUL data even when another byte is not UTF-8.
+            text = raw.decode('utf8', errors='replace')
         require(not INTERNAL_ID.search(text), f'internal identifier in text: {path}')
         path_text = text
         if path == 'retired/scripts/check_public_surface.py':
