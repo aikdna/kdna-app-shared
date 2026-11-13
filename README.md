@@ -1,10 +1,12 @@
 # KDNA App Shared
 
+> **Status Notice (Legacy Pre-0.6.0 Line):** This repository is preserved as a historical compatibility package and is not the active entrypoint for current KDNA Container `0.6.0` judgment works. For current specifications, offline CLI authoring/reading/encryption, Agent Skills, Desktop KDNA Reader, and *KDNA Whitepaper* (1.0.1), visit [`aikdna/kdna`](https://github.com/aikdna/kdna), [`aikdna/kdna-cli`](https://github.com/aikdna/kdna-cli), [`aikdna/kdna-skills`](https://github.com/aikdna/kdna-skills), and [`aikdna/kdna-assets`](https://github.com/aikdna/kdna-assets).
+
 Shared Swift API clients, request/response models, stream utilities, and display helpers for Apple applications.
 
 This pre-release package exposes the current Read presentation contract at the candidate coordinate in [public-contract-binding.json](public-contract-binding.json). SwiftPM resolves the exact public Core Git revision in `Package.swift` and `Package.resolved`. The binding preserves the corresponding Core contract and source-archive provenance; it does not assert a package tag or registry release.
 
-**Status (2026-10-24):** source release candidate pinned to Core `0.24.0-rc.component-semantics.2` / Read `0.3.0-rc.component-semantics.2` (via Swift `KDNACore` `0.4.0-rc.component-semantics.1`); last source change 2026-09-14. The current published npm line is CLI `0.43.2` / Core `0.37.9` / Read `0.13.3`; this package does not track it and no update is currently scheduled. Exact coordinates: [`public-contract-binding.json`](public-contract-binding.json). Historical tags and releases on this repository predate this candidate and are not asserted.
+**Status (2026-10-24):** source release candidate pinned to Core `0.24.0-rc.component-semantics.2` / Read `0.3.0-rc.component-semantics.2` (via Swift `KDNACore` `0.4.0-rc.component-semantics.1`); last source change 2026-09-14. The published npm line includes `@aikdna/kdna-cli` (`0.43.x` / current stable on npm); this legacy pre-0.6.0 package does not track it and no update is currently scheduled. Exact coordinates: [`public-contract-binding.json`](public-contract-binding.json). Historical tags and releases on this repository predate this candidate and are not asserted.
 
 The package declares macOS 13 and iOS 16 deployment targets. CI runs macOS builds, tests and public consumers, plus generic iOS device compilation. The iOS leg does not establish runtime behavior on a physical device.
 
