@@ -80,7 +80,8 @@ def main():
         print('+ ' + ' '.join(str(item) for item in argv), flush=True)
         subprocess.run([str(item) for item in argv], cwd=cwd, env=env, check=True)
     def options(scratch):
-        return ['--jobs', '1', '--scratch-path', work / scratch, '--cache-path', work / 'cache',
+        return ['--jobs', '1', '--disable-get-task-allow-entitlement',
+                '--scratch-path', work / scratch, '--cache-path', work / 'cache',
                 '--config-path', work / 'config', '--security-path', work / 'security',
                 '-Xcc', '-fmodules-cache-path=' + str(work / 'modules')]
     def consumer_package(folder, source):
