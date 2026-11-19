@@ -5,8 +5,6 @@
 
 # KDNA App Shared
 
-> **Status Notice (Legacy Pre-0.6.0 Line):** This repository is preserved as a historical compatibility package and is not the active entrypoint for current KDNA Container `0.6.0` judgment works. For current specifications, offline CLI authoring/reading/encryption, Agent Skills, Desktop KDNA Reader, and *KDNA Whitepaper* (1.0.1), visit [`aikdna/kdna`](https://github.com/aikdna/kdna), [`aikdna/kdna-cli`](https://github.com/aikdna/kdna-cli), [`aikdna/kdna-skills`](https://github.com/aikdna/kdna-skills), and [`aikdna/kdna-assets`](https://github.com/aikdna/kdna-assets).
-
 Shared Swift API clients, request/response models, stream utilities, and display helpers for Apple applications.
 
 This pre-release package exposes the current Read presentation contract at the candidate coordinate in [public-contract-binding.json](public-contract-binding.json). SwiftPM resolves the exact public Core Git revision in `Package.swift` and `Package.resolved`. The binding preserves the corresponding Core contract and source-archive provenance; it does not assert a package tag or registry release.
