@@ -37,7 +37,7 @@ The security model for KDNA assets is defined and implemented in:
 - **`aikdna/kdna-core-swift`** — Swift runtime with crypto parity
 
 For the KDNA Protocol security architecture, see
-[GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/docs/GOVERNANCE.md)
+[GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/SECURITY.md)
 in the main protocol repository.
 
 ## Best Practices

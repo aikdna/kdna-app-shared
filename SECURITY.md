@@ -47,7 +47,7 @@ grant Read/action permission. The excluded loading presentation APIs remain
 historical and are not supported compatibility paths.
 
 For the KDNA Protocol security architecture, see
-[GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/docs/GOVERNANCE.md)
+[GOVERNANCE.md](https://github.com/aikdna/kdna/blob/main/SECURITY.md)
 in the main protocol repository.
 
 Report misleading ready states, identity/correlation mismatches, unintended
